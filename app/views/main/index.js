@@ -1,6 +1,10 @@
 'use strict';
 
+// Styles
 require('./main.scss');
+
+// Templates
+require('./partials');
 require('./main.html');
 
 angular

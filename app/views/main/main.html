@@ -1,3 +1,48 @@
-<div class="main-view" ng-if="$ctrl.render">
-    {{$ctrl.foo}}
+<div class="main-view"
+     ng-class="[
+        '{{$ctrl.state.currentView}}-state'
+     ]"
+     ng-if="$ctrl.render">
+
+    <div class="problemSet">
+        <a class="question"
+           href
+           ng-click="$ctrl.state.go({view: 'answer', id: null})">
+             Q: Is Trump Still {{t|fuck:'ing'}} President?
+        </a>
+        <div class="answer"
+             ng-show="$ctrl.state.currentView !== 'answer'">
+            A: {{$ctrl.answerCollection.selectedItem}}
+        </div>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="content">
+            <div ng-if="$ctrl.state.currentView === 'answer'" ng-include="'views/main/partials/answer.html'"></div>
+            <div ng-if="$ctrl.state.currentView === 'joy'" ng-include="'views/main/partials/joy.html'"></div>
+            <div ng-if="$ctrl.state.currentView === 'actions'" ng-include="'views/main/partials/actions.html'"></div>
+        </div>
+
+        <div class="ctas">
+            <button ng-click="$ctrl.state.go({view: 'joy', id: null})">
+                Give me {{$ctrl.state.currentView === 'joy' ? 'more' : 'some'}} {{t|fuck:'ing'}} joy
+            </button>
+            <button ng-click="$ctrl.state.go({view: 'actions', id: null})">
+                Make a {{t|fuck:'ing'}} difference
+            </button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="creator-credit"></div>
+        <ul class="addtional-info">
+            <li>
+                <a href ng-click="$ctrl.sisterSite.go()">{{$ctrl.sisterSite.data.cta}}</a>
+            </li>
+            <li>
+                Emoji by <a href="http://emojione.com/">Emoji One</a>
+            </li>
+        </ul>
+    </div>
+
 </div>

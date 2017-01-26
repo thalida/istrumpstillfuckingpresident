@@ -4,7 +4,7 @@ var service = function( $sce ){
 	'ngInject';
 	var utils = {};
 
-	utils.getRandom = function( arr ){
+	utils.getRandomInArr = function( arr ){
 		return arr[Math.floor(Math.random()*arr.length)];
 	};
 
