@@ -1,0 +1,16 @@
+[
+    {
+        "active": true,
+        "title": "Place text here. Must be <100 characters!",
+        "description": "Place text here. Must be <100 characters!",
+        "url": "http://foobar.com",
+        "twitter": "OPTIONAL: http://twitter.com/<your-account>"
+    },
+    {
+        "active": true,
+        "title": "Place text here. Must be <100 characters!",
+        "description": "Place text here. Must be <100 characters!",
+        "url": "http://foobar.com",
+        "twitter": "OPTIONAL: http://twitter.com/<your-account>"
+    }
+]

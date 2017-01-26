@@ -49,6 +49,10 @@ var common = {
                 loader: "expose?moment"
             },
             {
+                test: require.resolve('lodash'),
+                loader: "expose?_"
+            },
+            {
                 test: /\.js$/,
                 loaders: ['ng-annotate'],
                 include: APP
@@ -99,6 +103,7 @@ var productionConfig = {
         })
     ]
 };
+
 var devConfig = {
     plugins: [
         new webpack.HotModuleReplacementPlugin(),

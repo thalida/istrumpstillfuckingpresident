@@ -10,7 +10,7 @@
     "deploy": "NODE_ENV=production gh-pages -d dist",
     "build:deploy": "npm run build && npm run deploy",
     "clean": "rm -rf dist",
-    "start": "webpack-dev-server --devtool eval --progress --colors --hot --inline --content-base dist --host 0.0.0.0 --port 8080"
+    "start": "webpack-dev-server --host 0.0.0.0 --port 8080 --content-base dist --devtool eval --history-api-fallback --hot --inline --progress --colors"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^3.0.1",
@@ -46,6 +46,7 @@
     "angular-ui-router": "^0.4.2",
     "jquery": "^2.1.4",
     "jquery-color": "git+https://github.com/jquery/jquery-color#b41ab1b73fabf1cab08e8b08cb5db4c44b65270b",
+    "lodash": "^4.17.4",
     "moment": "^2.10.6",
     "ngstorage": "^0.3.10"
   }

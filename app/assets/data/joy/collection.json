@@ -1,0 +1,24 @@
+[
+    {
+        "active": true,
+        "text": "Place text here. Must be <100 characters!",
+        "source": "http://foobar.com",
+        "twitter": "OPTIONAL: http://twitter.com/<your-account>"
+    },
+    {
+        "active": true,
+        "text": "~1.5 Millon Fucking People Participated in the Women’s March Around the World",
+        "source": "http://foobar.com"
+    },
+    {
+        "active": true,
+        "text": "~1.5 Millon Fucking People Participated in the Women’s March Around the World",
+        "source": "http://foobar.com"
+    },
+    {
+        "active": true,
+        "type": "gif|photo|video",
+        "url": "http://foobar.com",
+        "twitter": "OPTIONAL: http://twitter.com/<your-account>"
+    }
+]

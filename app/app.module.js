@@ -11,7 +11,17 @@ angular
     require('angular-ui-router'),
 	'ngStorage'
 ])
-.config( require('./app.route.js') );
+.constant('IS_FUCK_ENABLED', (function () {
+	var enabledSites = [
+		'fuckingdrumpf.dev',
+		'istrumpstillfuckingpresident.co',
+		'istrumpstillfuckingpresident.com'
+	];
 
-// Constants
-require('./app.constants.js');
+	return enabledSites.indexOf(window.location.hostname) >= 0;
+})())
+.constant('IS_STILL_PRESIDENT', require('./assets/data/stillpresident.json'))
+.constant('NEGATIVE_ANSWERS', require('./assets/data/answers/negative.json'))
+.constant('POSITIVE_ANSWERS', require('./assets/data/answers/positive.json'))
+.constant('JOY_COLLECTION', require('./assets/data/joy/collection.json'))
+.constant('ACTIONS_COLLECTION', require('./assets/data/actions/collection.json'))
