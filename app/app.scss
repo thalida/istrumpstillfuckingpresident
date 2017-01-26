@@ -1,0 +1,66 @@
+@import './assets/styles/generics';
+@import './assets/styles/mixins';
+@import './assets/styles/colors';
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+
+    background: white;
+    font: normal normal 16px/1.5 'Signika', 'Helvetica', 'Arial', sans-serif;
+    font-size: 1.8rem;
+}
+
+.app {
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+
+.emoji {
+    display: inline-block;
+    position: relative;
+    width: 18px;
+    height: 18px;
+
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    vertical-align: middle;
+
+    &-laughing-with-tears {
+        margin-top: 2px;
+        background-image: url('/assets/images/emoji-laughing_with_tears.svg');
+    }
+
+    &-information-desk-person {
+        background-image: url('/assets/images/emoji-information_desk_person.svg');
+    }
+
+    &-palm-pointing-up {
+        background-image: url('/assets/images/emoji-palm_pointing_up.svg');
+    }
+
+    &-raised-hands {
+        margin-top: -4px;
+        background-image: url('/assets/images/emoji-raised_hands.svg');
+    }
+}
