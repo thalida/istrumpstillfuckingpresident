@@ -1,6 +1,7 @@
 @import '../../assets/styles/colors';
 @import '../../assets/styles/generics';
 @import '../../assets/styles/mixins';
+@import '../../assets/styles/animations';
 
 .main-view {
     $footer-height: 80px;
@@ -11,6 +12,12 @@
 
     min-height: 100%;
     width: 100%;
+
+    background-color: $color-white-1;
+    background-size: 400% 400%;
+
+    -webkit-animation: gradient $animationTiming 30s infinite;
+    animation: gradient $animationTiming 30s infinite;
 
     transition: background 300ms ease-in-out;
     -moz-transition: background 300ms ease-in-out;
@@ -26,10 +33,10 @@
         width: $footer-width;
         height: $footer-height;
         left: 0;
-        bottom: 0;
+        bottom: $footer-padding-lr / 2;
         padding: $footer-padding-tb $footer-padding-lr;
 
-        background: rgba($color-white-1, 0.8);
+        color: $color-white-1;
 
         @extend .clearfix;
 
@@ -37,13 +44,8 @@
             display: block;
             float: left;
             width: 18px;
-        }
 
-        .ctas {
-            display: block;
-            float: left;
-            width: calc(100% - 120px - 18px);
-            text-align: center;
+            @include vertical-align();
         }
 
         .additional-info {
@@ -51,12 +53,43 @@
             float: right;
             margin: 0;
             padding: 0;
-            width: 120px;
+            width: 130px;
 
             list-style-type: none;
 
-            font-size: 1.4rem;
+            font-size: 1.2rem;
+            font-weight: 300;
+            line-height: 1.8;
             text-align: right;
+
+            color: $color-white-4;
+
+            .link {
+                opacity: 0.8;
+            }
+
+            @include vertical-align();
+        }
+
+        .ctas {
+            display: block;
+            float: left;
+            width: calc(100% - 130px - 18px);
+            text-align: center;
+
+            @include vertical-align();
+
+            .button {
+                margin: 0 5px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
         }
 
         @media (max-width: 500px) {
@@ -64,17 +97,43 @@
                 text-align: left;
             }
         }
+
     }
 
     &.answer-state {
-        background: blue;
+        background-image: linear-gradient(
+            135deg,
+            $color-blue-1 0%,
+            $color-blue-2 100%
+        );
     }
 
     &.joy-state {
-        background: yellow;
+        background-image: linear-gradient(
+            135deg,
+            $color-light-blue-1 0%,
+            $color-light-green-1 33%,
+            $color-yellow-1 66%,
+            $color-orange-1 100%
+        );
     }
 
     &.actions-state {
-        background: pink;
+        background-image: linear-gradient(
+            135deg, 
+            $color-pink-1 0%,
+            $color-purple-1 100%
+        );
+    }
+
+    &.joy-state,
+    &.actions-state {
+        .footer {
+            color: $color-black-1;
+
+            .additional-info {
+                color: $color-black-4;
+            }
+        }
     }
 }

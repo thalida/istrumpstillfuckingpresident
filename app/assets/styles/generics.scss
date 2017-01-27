@@ -21,13 +21,3 @@
     cursor: pointer;
     @extend %disable-selection;
 }
-
-.float-left {
-    float: left;
-    position: relative;
-}
-
-.float-right {
-    float: right;
-    position: relative;
-}

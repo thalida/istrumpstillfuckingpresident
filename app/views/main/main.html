@@ -9,8 +9,9 @@
      ng-if="$ctrl.render">
 
     <div class="problemSet">
-        <a class="question"
-           href
+        <a href
+           class="link question"
+           ng-class="{'link-dark': $ctrl.state.currentView !== 'answer'}"
            ng-click="$ctrl.state.go({view: 'answer', id: null})">
              Q: Is Trump Still {{t|fuck:'ing'}} President?
         </a>
@@ -28,24 +29,46 @@
 
     <div class="footer">
         <div class="creator-credit">
-            <span class="emoji emoji-raised-hands"></span>
+            <a class="link"
+               ng-class="{'link-dark': $ctrl.state.currentView !== 'answer'}"
+               href="http://thalida.com"
+               target="_blank">
+                <span class="emoji emoji-raised-hands"></span>
+            </a>
         </div>
 
         <div class="ctas">
-            <button ng-click="$ctrl.state.go({view: 'joy', id: null})">
+            <a class="button"
+               href
+               ng-class="{'button-dark': $ctrl.state.currentView !== 'answer'}"
+               ng-click="$ctrl.state.go({view: 'joy', id: null})">
                 Give me {{$ctrl.state.currentView === 'joy' ? 'more' : 'some'}} {{t|fuck:'ing'}} joy
-            </button>
-            <button ng-click="$ctrl.state.go({view: 'actions', id: null})">
+            </a>
+            <a class="button"
+               href
+               ng-class="{'button-dark': $ctrl.state.currentView !== 'answer'}"
+               ng-click="$ctrl.state.go({view: 'actions', id: null})">
                 Make a {{t|fuck:'ing'}} difference
-            </button>
+            </a>
         </div>
 
         <ul class="additional-info">
             <li>
-                <a href ng-click="$ctrl.sisterSite.go()">{{$ctrl.sisterSite.data.cta}}</a>
+                <a href
+                   class="link"
+                   ng-class="{'link-dark': $ctrl.state.currentView !== 'answer'}"
+                   ng-click="$ctrl.sisterSite.go()">
+                    {{$ctrl.sisterSite.data.cta}}
+                </a>
             </li>
             <li>
-                Emoji by <a href="http://emojione.com/">Emoji One</a>
+                Emoji by
+                <a class="link"
+                   ng-class="{'link-dark': $ctrl.state.currentView !== 'answer'}"
+                   href="http://emojione.com/"
+                   target="_blank">
+                   Emoji One
+               </a>
             </li>
         </ul>
     </div>
