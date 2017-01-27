@@ -53,6 +53,25 @@ body {
     }
 }
 
+.icon {
+    display: inline-block;
+    position: relative;
+    width: 18px;
+    height: 18px;
+
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    vertical-align: middle;
+
+    &-link {
+        background-image: url('/assets/images/link-icon.svg');
+    }
+
+    &-share {
+        background-image: url('/assets/images/share-icon.svg');
+    }
+}
+
 .link {
     color: $color-white-1;
     text-decoration: none;

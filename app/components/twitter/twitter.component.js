@@ -21,17 +21,16 @@ module.exports = {
             };
 
             $ctrl.getEmbed = function () {
-                var queryUrl = $sce.trustAsResourceUrl('https://publish.twitter.com/oembed?omit_script=true&url=' + $ctrl.url);
+                var queryUrl = $sce.trustAsResourceUrl('https://publish.twitter.com/oembed?url=' + $ctrl.url);
 
                 $http
                     .jsonp(queryUrl, {jsonpCallbackParam: 'callback'})
                     .then(function (res) {
-                        $ctrl.render = true;
                         $ctrl.embed = $sce.trustAsHtml(res.data.html);
 
                         $timeout(function(){
-                            twttr.widgets.load();
-                        }, 10)
+                            $ctrl.render = true;
+                        }, 300);
                     });
             };
         }

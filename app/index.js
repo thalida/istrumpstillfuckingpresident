@@ -3,7 +3,6 @@ require('jquery');
 require('lodash');
 require('angular');
 require('moment');
-require('jquery-color/jquery.color');
 
 window.requireAll = require('./assets/helpers/require-utils.js').requireAll;
 

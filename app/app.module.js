@@ -9,6 +9,7 @@ angular
 	require('angular-sanitize'),
 	require('angular-touch'),
     require('angular-ui-router'),
+	require('ngclipboard'),
 	'ngStorage'
 ])
 .constant('IS_FUCK_ENABLED', (function () {

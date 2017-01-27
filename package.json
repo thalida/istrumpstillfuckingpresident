@@ -45,9 +45,9 @@
     "angular-touch": "^1.6.0",
     "angular-ui-router": "^0.4.2",
     "jquery": "^2.1.4",
-    "jquery-color": "git+https://github.com/jquery/jquery-color#b41ab1b73fabf1cab08e8b08cb5db4c44b65270b",
     "lodash": "^4.17.4",
     "moment": "^2.10.6",
+    "ngclipboard": "^1.1.1",
     "ngstorage": "^0.3.10"
   }
 }

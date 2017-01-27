@@ -1,4 +1,5 @@
 <div class="main-view"
+     ng-cloak
      ng-class="[
         {
             'is-answer-state': $ctrl.state.currentView === 'answer',
@@ -9,15 +10,24 @@
      ng-if="$ctrl.render">
 
     <div class="header">
-        <a href
-           class="link question"
-           ng-class="{'link-dark': $ctrl.state.currentView !== 'answer'}"
-           ng-click="$ctrl.state.go({view: 'answer', id: null})">
-             Q: Is Trump Still {{t|fuck:'ing'}} President?
-        </a>
-        <div class="answer"
-             ng-show="$ctrl.state.currentView !== 'answer'">
-            A: {{$ctrl.answerCollection.selectedItem}}
+        <div class="problem-section">
+            <a href
+               class="link question"
+               ng-class="{'link-dark': $ctrl.state.currentView !== 'answer'}"
+               ng-click="$ctrl.state.go({view: 'answer', id: null})">
+                 Q: Is Trump Still {{t|fuck:'ing'}} President?
+            </a>
+            <div class="answer"
+                 ng-show="$ctrl.state.currentView !== 'answer'">
+                A: {{$ctrl.answerCollection.selectedItem}}
+            </div>
+        </div>
+        <div class="share-section"
+             ng-show="$ctrl.state.currentView === 'joy'">
+            <span class="clickable icon icon-share"
+                  ngclipboard
+                  data-clipboard-text="{{$ctrl.state.shareUrl}}">
+            </span>
         </div>
     </div>
 
@@ -42,7 +52,8 @@
                href
                ng-class="{'button-dark': $ctrl.state.currentView !== 'answer'}"
                ng-click="$ctrl.state.go({view: 'joy', id: null})">
-                Give me {{$ctrl.state.currentView === 'joy' ? 'more' : 'some'}} {{t|fuck:'ing'}} joy
+               <span ng-show="$ctrl.state.currentView === 'joy'">More {{t|fuck:'ing'}} joy</span>
+               <span ng-hide="$ctrl.state.currentView === 'joy'">Give me some {{t|fuck:'ing'}} joy</span>
             </a>
             <a class="button"
                href
