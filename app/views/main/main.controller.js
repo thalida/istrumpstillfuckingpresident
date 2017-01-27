@@ -49,8 +49,10 @@ var Controller = function (
 
 	$ctrl.state = {
 		supported: ['answer', 'joy', 'actions'],
+		defaultView: 'answer',
 		currentView: null,
 		currentId: null,
+		shareUrl: null,
 		setup: function (state) {
 			var id = parseInt(state.id, 10);
 
@@ -70,6 +72,7 @@ var Controller = function (
 		},
 		go: function (state, params) {
 			this.updateLocationBar(state, params);
+			this.updateShareUrl(state);
 			this.setup(state);
 		},
 		updateLocationBar: function (state, params, source) {
@@ -79,11 +82,24 @@ var Controller = function (
 			$state.go('main', state, settings);
 			$stateParams = state;
 		},
+		updateShareUrl: function (state) {
+			this.shareUrl = window.location.origin;
+
+			if (state.view) {
+				this.shareUrl += '/' + state.view;
+			} else {
+				this.shareUrl += '/' + this.defaultView
+			}
+
+			if (state.id) {
+				this.shareUrl += '/' + state.id;
+			}
+		},
 		validate: function (state) {
 			if (this.supported.indexOf(state) === -1) {
 				return {
 					passed: false,
-					fallback: 'answer',
+					fallback: this.defaultView,
 				}
 			}
 
@@ -103,7 +119,7 @@ var Controller = function (
 			this.currentId = res.currentIndex + 1;
 
 			var newState = { view: this.currentView, id: this.currentId };
-			this.updateLocationBar(newState, {}, 'joy');
+			this.updateShareUrl(newState);
 			return true;
 		}
 	};
