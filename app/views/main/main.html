@@ -1,6 +1,10 @@
 <div class="main-view"
      ng-class="[
-        '{{$ctrl.state.currentView}}-state'
+        {
+            'answer-state': $ctrl.state.currentView === 'answer',
+            'joy-state': $ctrl.state.currentView === 'joy',
+            'actions-state': $ctrl.state.currentView === 'actions',
+        }
      ]"
      ng-if="$ctrl.render">
 
@@ -16,11 +20,15 @@
         </div>
     </div>
 
-    <div class="content-wrapper">
-        <div class="content">
-            <div ng-if="$ctrl.state.currentView === 'answer'" ng-include="'views/main/partials/answer.html'"></div>
-            <div ng-if="$ctrl.state.currentView === 'joy'" ng-include="'views/main/partials/joy.html'"></div>
-            <div ng-if="$ctrl.state.currentView === 'actions'" ng-include="'views/main/partials/actions.html'"></div>
+    <div class="content">
+        <div ng-if="$ctrl.state.currentView === 'answer'" ng-include="'views/main/partials/answer.html'"></div>
+        <div ng-if="$ctrl.state.currentView === 'joy'" ng-include="'views/main/partials/joy.html'"></div>
+        <div ng-if="$ctrl.state.currentView === 'actions'" ng-include="'views/main/partials/actions.html'"></div>
+    </div>
+
+    <div class="footer">
+        <div class="creator-credit">
+            <span class="emoji emoji-raised-hands"></span>
         </div>
 
         <div class="ctas">
@@ -31,13 +39,8 @@
                 Make a {{t|fuck:'ing'}} difference
             </button>
         </div>
-    </div>
 
-    <div class="footer">
-        <div class="creator-credit">
-            <span class="emoji emoji-raised-hands"></span>
-        </div>
-        <ul class="addtional-info">
+        <ul class="additional-info">
             <li>
                 <a href ng-click="$ctrl.sisterSite.go()">{{$ctrl.sisterSite.data.cta}}</a>
             </li>
@@ -46,5 +49,4 @@
             </li>
         </ul>
     </div>
-
 </div>

@@ -3,4 +3,78 @@
 @import '../../assets/styles/mixins';
 
 .main-view {
+    $footer-height: 80px;
+    $footer-width: 100%;
+    $footer-inner-width: 90%;
+    $footer-padding-lr: ($footer-width - $footer-inner-width) / 2;
+    $footer-padding-tb: 20px;
+
+    min-height: 100%;
+    width: 100%;
+
+    transition: background 300ms ease-in-out;
+    -moz-transition: background 300ms ease-in-out;
+    -webkit-transition: background 300ms ease-in-out;
+
+    .content {
+        padding-bottom: $footer-height + $footer-padding-tb;
+    }
+
+    .footer {
+        display: block;
+        position: fixed;
+        width: $footer-width;
+        height: $footer-height;
+        left: 0;
+        bottom: 0;
+        padding: $footer-padding-tb $footer-padding-lr;
+
+        background: rgba($color-white-1, 0.8);
+
+        @extend .clearfix;
+
+        .creator-credit {
+            display: block;
+            float: left;
+            width: 18px;
+        }
+
+        .ctas {
+            display: block;
+            float: left;
+            width: calc(100% - 120px - 18px);
+            text-align: center;
+        }
+
+        .additional-info {
+            display: block;
+            float: right;
+            margin: 0;
+            padding: 0;
+            width: 120px;
+
+            list-style-type: none;
+
+            font-size: 1.4rem;
+            text-align: right;
+        }
+
+        @media (max-width: 500px) {
+            .ctas {
+                text-align: left;
+            }
+        }
+    }
+
+    &.answer-state {
+        background: blue;
+    }
+
+    &.joy-state {
+        background: yellow;
+    }
+
+    &.actions-state {
+        background: pink;
+    }
 }
