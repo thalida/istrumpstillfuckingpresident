@@ -32,7 +32,7 @@ var service = function (
 		this.selectionType = (type === 'actions') ? 'group' : 'item';
 
 		this.itemsIndexes = [];
-		this.previousIndex = null;
+		this.usedIndexes = [];
 		this.currentIndex = null;
 		this.selectedItem = null;
 
@@ -74,12 +74,24 @@ var service = function (
 			return false;
 		}
 
-		this.previousIndex = angular.copy(this.currentIndex);
+		if (typeof this.currentIndex !== 'undefined'
+			&& this.currentIndex !== null
+			&& this.currentIndex >= 0
+		) {
+			this.usedIndexes.push(this.currentIndex);
+		}
 
 		if (typeof id === 'number' && !isNaN(id)) {
 			this.currentIndex = id;
 		} else {
-			this.currentIndex = utils.getRandomInArr(_.without(this.itemsIndexes, this.previousIndex));
+			var options = _.difference(this.itemsIndexes, this.usedIndexes);
+
+			if (options.length === 0) {
+				this.usedIndexes = [];
+				options = angular.copy(this.itemsIndexes);
+			}
+
+			this.currentIndex = utils.getRandomInArr(options);
 		}
 
 		this.selectedItem = this.items[this.currentIndex];

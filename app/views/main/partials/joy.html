@@ -1,1 +1,43 @@
-Joy {{$ctrl.joyCollection.selectedItem}}
+<div class="joy-section">
+    <div class="joy-content" ng-switch on="$ctrl.joyCollection.selectedItem.type">
+        <div ng-switch-when="text">
+            <p>
+                {{$ctrl.joyCollection.selectedItem.text}}
+            </p>
+            <a ng-if="$ctrl.joyCollection.selectedItem.source"
+               ng-href="{{$ctrl.joyCollection.selectedItem.source}}">
+               {{$ctrl.joyCollection.selectedItem.source}}
+            </a>
+        </div>
+
+        <div ng-switch-when="image">
+            <img ng-src="{{$ctrl.joyCollection.selectedItem.url}}" />
+            <a ng-if="$ctrl.joyCollection.selectedItem.source"
+               ng-href="{{$ctrl.joyCollection.selectedItem.source}}">
+               {{$ctrl.joyCollection.selectedItem.source}}
+            </a>
+        </div>
+
+        <div ng-switch-when="youtube">
+            <iframe ng-src="{{$ctrl.joyCollection.selectedItem.videoId | youtubeEmbedUrl}}"
+                    width="560"
+                    height="315"
+                    frameborder="0"
+                    allowfullscreen>
+            </iframe>
+        </div>
+
+        <div ng-switch-when="twitter">
+            <twitter url="{{$ctrl.joyCollection.selectedItem.url}}"></twitter>
+        </div>
+
+        <div ng-switch-when="spotify">
+            <iframe ng-src="{{$ctrl.joyCollection.selectedItem.uri | spotifyEmbedUrl}}"
+                    width="300"
+                    height="380"
+                    frameborder="0"
+                    allowtransparency="true">
+            </iframe>
+        </div>
+    </div>
+</div>

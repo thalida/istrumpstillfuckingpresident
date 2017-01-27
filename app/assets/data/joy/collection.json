@@ -1,24 +1,34 @@
 [
     {
         "active": true,
-        "text": "Place text here. Must be <100 characters!",
-        "source": "http://foobar.com",
-        "twitter": "OPTIONAL: http://twitter.com/<your-account>"
-    },
-    {
-        "active": true,
+        "type": "text",
         "text": "~1.5 Millon Fucking People Participated in the Women’s March Around the World",
         "source": "http://foobar.com"
     },
     {
         "active": true,
-        "text": "~1.5 Millon Fucking People Participated in the Women’s March Around the World",
+        "type": "text",
+        "text": "A Nazi Was Punched In the Face"
+    },
+    {
+        "active": true,
+        "type": "twitter",
+        "url": "https://twitter.com/ibizoboi/status/823199147960528900"
+    },
+    {
+        "active": true,
+        "type": "image",
+        "url": "http://www.pbh2.com/wordpress/wp-content/uploads/2013/05/cutest-cat-gifs-licking.gif",
         "source": "http://foobar.com"
     },
     {
         "active": true,
-        "type": "gif|photo|video",
-        "url": "http://foobar.com",
-        "twitter": "OPTIONAL: http://twitter.com/<your-account>"
+        "type": "youtube",
+        "videoId": "s4yUEWZ4u0g"
+    },
+    {
+        "active": true,
+        "type": "spotify",
+        "uri": "spotify:track:5JTAGruCIDyRLhKLwFkTnS"
     }
 ]
