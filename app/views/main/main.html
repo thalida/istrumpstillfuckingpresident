@@ -1,14 +1,14 @@
 <div class="main-view"
      ng-class="[
         {
-            'answer-state': $ctrl.state.currentView === 'answer',
-            'joy-state': $ctrl.state.currentView === 'joy',
-            'actions-state': $ctrl.state.currentView === 'actions',
+            'is-answer-state': $ctrl.state.currentView === 'answer',
+            'is-joy-state': $ctrl.state.currentView === 'joy',
+            'is-actions-state': $ctrl.state.currentView === 'actions',
         }
      ]"
      ng-if="$ctrl.render">
 
-    <div class="problemSet">
+    <div class="header">
         <a href
            class="link question"
            ng-class="{'link-dark': $ctrl.state.currentView !== 'answer'}"

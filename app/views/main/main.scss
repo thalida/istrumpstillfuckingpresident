@@ -4,27 +4,86 @@
 @import '../../assets/styles/animations';
 
 .main-view {
+    $page-width: 100%;
+    $page-inner-width: 90%;
+    $page-padding-lr: ($page-width - $page-inner-width) / 2;
+
     $footer-height: 80px;
-    $footer-width: 100%;
-    $footer-inner-width: 90%;
-    $footer-padding-lr: ($footer-width - $footer-inner-width) / 2;
+    $footer-width: $page-width;
+    $footer-inner-width: $page-inner-width;
+    $footer-padding-lr: $page-padding-lr;
     $footer-padding-tb: 20px;
 
+    display: block;
+    position: absolute;
+    overflow: auto;
+    height: 100%;
     min-height: 100%;
     width: 100%;
 
     background-color: $color-white-1;
     background-size: 400% 400%;
 
-    -webkit-animation: gradient $animationTiming 30s infinite;
-    animation: gradient $animationTiming 30s infinite;
+    -webkit-animation: gradient $animationTiming 60s infinite;
+    animation: gradient $animationTiming 60s infinite;
 
     transition: background 300ms ease-in-out;
     -moz-transition: background 300ms ease-in-out;
     -webkit-transition: background 300ms ease-in-out;
 
+    .header {
+        display: block;
+        position: fixed;
+        width: auto;
+        margin: 0 $page-padding-lr;
+        padding: ($page-padding-lr / 2) 0 15px;
+
+        color: $color-white-1;
+        border-bottom: 1px solid $color-white-4;
+
+        transition: all 300ms linear;
+        -moz-transition: all 300ms linear;
+        -webkit-transition: all 300ms linear;
+
+        .link {
+            border: 0;
+        }
+
+        .question {
+            font-weight: 500;
+            text-transform: capitalize;
+        }
+
+        .answer {
+            font-weight: 300;
+        }
+    }
+
     .content {
+        display: block;
+        position: relative;
+        height: auto;
+        width: 80%;
+        max-width: 800px;
+        margin: 0 auto;
         padding-bottom: $footer-height + $footer-padding-tb;
+
+        text-align: center;
+
+        @include vertical-align();
+
+        .answer-section {
+            color: $color-white-1;
+            font-size: 8.0rem;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+
+        .joy-section {
+            .twitter-tweet.twitter-tweet-rendered {
+                margin: 0 auto;
+            }
+        }
     }
 
     .footer {
@@ -49,8 +108,11 @@
         }
 
         .additional-info {
+            @include vertical-align();
+
             display: block;
-            float: right;
+            position: absolute;
+            right: $footer-padding-lr;
             margin: 0;
             padding: 0;
             width: 130px;
@@ -59,7 +121,7 @@
 
             font-size: 1.2rem;
             font-weight: 300;
-            line-height: 1.8;
+            line-height: 2.0;
             text-align: right;
 
             color: $color-white-4;
@@ -67,14 +129,12 @@
             .link {
                 opacity: 0.8;
             }
-
-            @include vertical-align();
         }
 
         .ctas {
             display: block;
             float: left;
-            width: calc(100% - 130px - 18px);
+            width: calc(100% - 18px);
             text-align: center;
 
             @include vertical-align();
@@ -100,7 +160,7 @@
 
     }
 
-    &.answer-state {
+    &.is-answer-state {
         background-image: linear-gradient(
             135deg,
             $color-blue-1 0%,
@@ -108,7 +168,7 @@
         );
     }
 
-    &.joy-state {
+    &.is-joy-state {
         background-image: linear-gradient(
             135deg,
             $color-light-blue-1 0%,
@@ -118,16 +178,21 @@
         );
     }
 
-    &.actions-state {
+    &.is-actions-state {
         background-image: linear-gradient(
-            135deg, 
+            135deg,
             $color-pink-1 0%,
             $color-purple-1 100%
         );
     }
 
-    &.joy-state,
-    &.actions-state {
+    &.is-joy-state,
+    &.is-actions-state {
+        .header {
+            color: $color-black-1;
+            border-bottom-color: $color-black-4;
+        }
+
         .footer {
             color: $color-black-1;
 
