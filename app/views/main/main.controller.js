@@ -31,7 +31,6 @@ var Controller = function (
 
 		$ctrl.answerCollection = new Collection('answers');
 		$ctrl.joyCollection = new Collection('joy');
-		console.log('%c$ctrl.joyCollection ', 'color:green;', $ctrl.joyCollection.itemsIndexes );
 		$ctrl.actionsCollection = new Collection('actions');
 
 		$ctrl.state.setup({
@@ -70,10 +69,10 @@ var Controller = function (
 			return true;
 		},
 		go: function (state, params) {
-			this.setup(state);
 			this.updateLocationBar(state, params);
+			this.setup(state);
 		},
-		updateLocationBar: function (state, params) {
+		updateLocationBar: function (state, params, source) {
 			var defaults = { notify: false };
 			var settings = angular.extend({}, defaults, params);
 
@@ -94,7 +93,6 @@ var Controller = function (
 			$ctrl.answerCollection.updateSelectedItem();
 		},
 		joy: function (id) {
-			console.log('%cid', 'color:green;', id);
 			var res = $ctrl.joyCollection.updateSelectedItem(id);
 
 			if (res === false) {
@@ -105,10 +103,7 @@ var Controller = function (
 			this.currentId = res.currentIndex + 1;
 
 			var newState = { view: this.currentView, id: this.currentId };
-			this.updateLocationBar(newState)
-			console.log('%cnewState', 'color:green;', newState);
-			console.log('%cthis.currentId', 'color:green;', this.currentId);
-			console.log('sdfs', $stateParams);
+			this.updateLocationBar(newState, {}, 'joy');
 			return true;
 		}
 	};
