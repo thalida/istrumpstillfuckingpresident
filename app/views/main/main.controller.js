@@ -38,10 +38,6 @@ var Controller = function (
 			id: $stateParams.id - 1
 		});
 
-		if ($ctrl.state.currentView !== 'answer') {
-			$ctrl.answerCollection.updateSelectedItem();
-		}
-
 		$ctrl.render = true;
 
 		return true;
@@ -66,6 +62,10 @@ var Controller = function (
 
 			if (_.isFunction(this[this.currentView])) {
 				this[this.currentView](this.currentId);
+			}
+
+			if ($ctrl.state.currentView !== 'answer') {
+				$ctrl.answerCollection.updateSelectedItem();
 			}
 
 			return true;

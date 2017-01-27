@@ -7,6 +7,12 @@
     },
     {
         "active": true,
+        "type": "spotify",
+        "title": "Self Preservation Playlist",
+        "uri": "spotify:user:ohbunnystack:playlist:6d7qWYZ7y5hOdtnTPEq9mB"
+    },
+    {
+        "active": true,
         "type": "text",
         "text": "A Nazi Was Punched In the Face"
     },

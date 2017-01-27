@@ -29,6 +29,13 @@ body {
     font-size: 1.8rem;
 }
 
+h1 {
+    color: $color-black-3;
+    font-size: 5.0rem;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
 .app {
     display: block;
     position: relative;

@@ -24,8 +24,13 @@
     background-color: $color-white-1;
     background-size: 400% 400%;
 
-    -webkit-animation: gradient $animationTiming 90s infinite;
-    animation: gradient $animationTiming 90s infinite;
+    animation-duration: 120s;
+    animation-name: gradient;
+    animation-iteration-count: infinite;
+
+
+    //-webkit-animation: gradient $animationTiming 90s infinite;
+    //animation: gradient $animationTiming 90s infinite;
 
     transition: background 500ms ease-in-out;
     -moz-transition: background 500ms ease-in-out;
@@ -167,6 +172,10 @@
             width: 18px;
 
             @include vertical-align();
+
+            .link {
+                border: 0;
+            }
         }
 
         .additional-info {
@@ -234,9 +243,8 @@
         background-image: linear-gradient(
             135deg,
             $color-light-blue-1 0%,
-            $color-light-green-1 33%,
-            $color-yellow-1 66%,
-            $color-orange-1 100%
+            $color-light-green-1 50%,
+            $color-yellow-1 100%
         );
     }
 

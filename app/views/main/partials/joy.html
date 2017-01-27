@@ -37,6 +37,7 @@
     </div>
 
     <div class="spotify-content" ng-switch-when="spotify">
+        <h1 ng-if="$ctrl.joyCollection.selectedItem.title">{{$ctrl.joyCollection.selectedItem.title}}</h1>
         <iframe ng-src="{{$ctrl.joyCollection.selectedItem.uri | spotifyEmbedUrl}}"
                 width="300"
                 height="380"
