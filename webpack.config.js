@@ -32,7 +32,7 @@ var common = {
         path: DIST,
         filename: "[name].[hash].js",
         chunkFilename: "[id].js",
-        publicPath: ''
+        publicPath: '/istrumpstillfuckingpresident/'
     },
     module: {
         loaders: [
