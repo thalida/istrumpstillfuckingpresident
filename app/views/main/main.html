@@ -68,6 +68,7 @@
             </a>
             <a class="button"
                href
+               ng-show="$ctrl.actionsCollection.selectedGroup.length > 0"
                ng-class="{
                    'button-dark': $ctrl.state.currentView === 'joy',
                    'button-clear': $ctrl.state.currentView === 'actions'
