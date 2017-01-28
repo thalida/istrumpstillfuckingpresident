@@ -6,7 +6,10 @@
 
 .answer-section {
     color: $color-white-1;
-    font-size: 8.0rem;
     font-weight: 300;
     line-height: 1.2;
+
+    h1 {
+        color: $color-white-1;
+    }
 }
