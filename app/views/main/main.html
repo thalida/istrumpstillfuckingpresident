@@ -24,8 +24,19 @@
         </div>
         <div class="share-section"
              ng-show="$ctrl.state.currentView === 'joy'">
+            <span class="copy-status"
+                 ng-class="{
+                    'is-success': $ctrl.copyStatusType === 'success',
+                    'is-error': $ctrl.copyStatusType === 'error',
+                    'is-visible': $ctrl.copyStatusVisible === true
+                }">
+                <span ng-show="$ctrl.copyStatusType === 'success'">Url copied to clipboard</span>
+                <span ng-show="$ctrl.copyStatusType === 'error'">Error copying url to clipboard</span>
+            </span>
             <span class="clickable icon icon-share"
                   ngclipboard
+                  ngclipboard-success="$ctrl.onCopySuccess(e);"
+                  ngclipboard-error="$ctrl.onCopyError(e);"
                   data-clipboard-text="{{$ctrl.state.shareUrl}}">
             </span>
         </div>

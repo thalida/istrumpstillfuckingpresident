@@ -3,6 +3,7 @@
 var Controller = function (
 	$state,
 	$stateParams,
+	$timeout,
 	utils,
 	sitesService,
 	Collection,
@@ -17,6 +18,8 @@ var Controller = function (
 
 	var $ctrl = this;
 
+	$ctrl.copyStatusType = null;
+	$ctrl.copyStatusVisible = false;
     $ctrl.render = false;
 
 	$ctrl.init = function () {
@@ -133,6 +136,24 @@ var Controller = function (
 		go: function () {
 			window.location.href = this.data.url + window.location.pathname;
 		}
+	};
+
+	$ctrl.onCopySuccess = function () {
+		$ctrl.copyStatusType = 'success';
+		$ctrl.copyStatusVisible = true;
+
+		$timeout(function(){
+			$ctrl.copyStatusVisible = false;
+		}, 2000);
+	};
+
+	$ctrl.onCopyError = function () {
+		$ctrl.copyStatusType = 'error';
+		$ctrl.copyStatusVisible = true;
+
+		$timeout(function(){
+			$ctrl.copyStatusVisible = false;
+		}, 2000);
 	};
 
 	$ctrl.init();
