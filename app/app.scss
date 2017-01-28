@@ -36,6 +36,24 @@ h1 {
     line-height: 1.4;
 }
 
+h2 {
+    color: $color-black-1;
+    font-size: 2.4rem;
+    font-weight: 300;
+    line-height: 1.5;
+
+    //&:after {
+    //    content: "";
+    //
+    //    display: block;
+    //    width: 50px;
+    //    height: 2px;
+    //    margin: 10px 0;
+    //
+    //    background: black;
+    //}
+}
+
 .app {
     display: block;
     position: relative;

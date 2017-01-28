@@ -3,14 +3,60 @@
         "active": true,
         "title": "Place text here. Must be <100 characters!",
         "description": "Place text here. Must be <100 characters!",
-        "url": "http://foobar.com",
-        "twitter": "OPTIONAL: http://twitter.com/<your-account>"
+        "url": "http://foobar.com"
+    },
+    {
+        "active": true,
+        "title": "Place text here. Must be <100 characters!",
+        "description": "Place text here. Must be <100 characters!",
+        "source": "http://twitter.com/thalidanoel"
     },
     {
         "active": true,
         "title": "Place text here. Must be <100 characters!",
         "description": "Place text here. Must be <100 characters!",
         "url": "http://foobar.com",
-        "twitter": "OPTIONAL: http://twitter.com/<your-account>"
+        "source": "http://example.com"
+    },
+    {
+        "active": true,
+        "title": "Place text here. Must be <100 characters!",
+        "description": "Place text here. Must be <100 characters!"
+    },
+    {
+        "active": true,
+        "title": "Place text here. Must be <100 characters!",
+        "description": "Place text here. Must be <100 characters!",
+        "source": "http://twitter.com/thalidanoel"
+    },
+    {
+        "active": true,
+        "title": "Place text here. Must be <100 characters!",
+        "description": "Place text here. Must be <100 characters!",
+        "url": "http://foobar.com",
+        "source": "http://example.com"
+    },
+    {
+        "active": true,
+        "title": "Place text here. Must be <100 characters!",
+        "description": "Place text here. Must be <100 characters!"
+    },
+    {
+        "active": true,
+        "title": "Place text here. Must be <100 characters!",
+        "description": "Place text here. Must be <100 characters!",
+        "source": "http://twitter.com/thalidanoel"
+    },
+    {
+        "active": true,
+        "title": "Place text here. Must be <100 characters!",
+        "description": "Place text here. Must be <100 characters!",
+        "url": "http://foobar.com",
+        "source": "http://example.com"
+    },
+    {
+        "active": true,
+        "title": "Place text here. Must be <100 characters!",
+        "description": "Place text here. Must be <100 characters!"
     }
 ]

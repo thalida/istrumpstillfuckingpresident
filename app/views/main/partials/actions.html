@@ -1,3 +1,25 @@
 <div class="actions-section">
-    {{$ctrl.actionsCollection.selectedGroup}}
+    <h1>Make a {{t|fuck:'ing'}} Difference</h1>
+
+    <div class="actions-list">
+        <div class="action-item"
+             ng-repeat="action in $ctrl.actionsCollection.selectedGroup track by $index">
+
+
+            <h2 class="action-item-title">{{action.title}}</h2>
+
+            <p class="action-item-description">{{action.description}}</p>
+
+            <div class="action-item-source" ng-if="action.source">
+                source:
+                <a class="link link-dark" ng-href="{{action.source}}" target="_blank">
+                   {{action.source}}
+                </a>
+            </div>
+            
+            <a class="action-item-link button" ng-if="action.url" ng-href="{{action.url}}" target="_blank">
+                Take Action
+            </a>
+        </div>
+    </div>
 </div>
