@@ -64,11 +64,12 @@
 
         .share-section {
             float: right;
+            text-align: right;
         }
 
         .copy-status {
+            display: block;
             padding: 10px;
-            margin-right: 10px;
 
             border-radius: 4px;
             box-shadow: 0 5px 4px 0 rgba($color-black-1, 0.05);
@@ -95,6 +96,22 @@
                 opacity: 1;
             }
         }
+
+        @media (max-width: 450px) {
+            .problem-section {
+                display: block;
+                float: none;
+                width: 100%;
+            }
+
+            .share-section {
+                display: block;
+                float: none;
+                width: 100%;
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
     }
 
     .content {
@@ -112,7 +129,7 @@
             color: $color-white-1;
             font-size: 8.0rem;
             font-weight: 300;
-            line-height: 1.5;
+            line-height: 1.2;
         }
 
         .joy-section {
@@ -312,12 +329,53 @@
             }
         }
 
-        @media (max-width: 500px) {
+        @media (max-width: 750px) {
             .ctas {
-                text-align: left;
+                .button {
+                    margin: 0 2px;
+                    padding: 10px 15px;
+                    font-size: 1.6rem;
+                }
             }
         }
 
+        @media (max-width: 630px) {
+            .ctas {
+                .button {
+                    margin: 0 2px;
+                    padding: 10px;
+                    font-size: 1.4rem;
+                }
+            }
+        }
+
+        @media (max-width: 570px) {
+            .ctas {
+                padding-left: $footer-padding-lr;
+                text-align: left;
+
+                .button {
+                    padding: 10px;
+                }
+            }
+        }
+
+        @media (max-width: 460px) {
+            .ctas {
+                padding-left: 0;
+                top: -$footer-height;
+                width: 100%;
+
+                .button {
+                    display: block;
+                    margin: 10px auto !important;
+                    width: 60%;
+                    min-width: 200px;
+
+                    text-align: center;
+                }
+            }
+        }
     }
 
     &.is-answer-state {
