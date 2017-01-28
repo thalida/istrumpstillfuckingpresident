@@ -4,8 +4,6 @@
     <div class="actions-list">
         <div class="action-item"
              ng-repeat="action in $ctrl.actionsCollection.selectedGroup track by $index">
-
-
             <h2 class="action-item-title">{{action.title}}</h2>
 
             <p class="action-item-description">{{action.description}}</p>
@@ -16,7 +14,7 @@
                    {{action.source}}
                 </a>
             </div>
-            
+
             <a class="action-item-link button" ng-if="action.url" ng-href="{{action.url}}" target="_blank">
                 Take Action
             </a>

@@ -68,7 +68,10 @@
             </a>
             <a class="button"
                href
-               ng-class="{'button-dark': $ctrl.state.currentView !== 'answer'}"
+               ng-class="{
+                   'button-dark': $ctrl.state.currentView === 'joy',
+                   'button-clear': $ctrl.state.currentView === 'actions'
+               }"
                ng-click="$ctrl.state.go({view: 'actions', id: null})">
                 Make a {{t|fuck:'ing'}} difference
             </a>

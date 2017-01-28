@@ -41,17 +41,6 @@ h2 {
     font-size: 2.4rem;
     font-weight: 300;
     line-height: 1.5;
-
-    //&:after {
-    //    content: "";
-    //
-    //    display: block;
-    //    width: 50px;
-    //    height: 2px;
-    //    margin: 10px 0;
-    //
-    //    background: black;
-    //}
 }
 
 .app {
@@ -162,5 +151,17 @@ h2 {
         &:hover {
             background: $color-black-4;
         }
+    }
+
+    &.button-yellow {
+        color: $color-black-1;
+        background: #FFE668;
+        border-color: $color-black-1;
+    }
+
+    &.button-clear {
+        color: $color-black-1;
+        background: transparent;
+        border-color: $color-black-1;
     }
 }
