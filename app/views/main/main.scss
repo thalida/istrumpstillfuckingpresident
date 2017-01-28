@@ -124,10 +124,10 @@
         display: block;
         position: relative;
         height: auto;
-        width: 80%;
+        width: 100%;
         max-width: 800px;
         margin: 0 auto;
-        padding-bottom: $footer-height + $footer-padding-tb;
+        padding: 0 10% $footer-height + $footer-padding-tb;
 
         text-align: center;
 
@@ -372,21 +372,10 @@
             }
         }
 
-        @media (max-width: 675px) {
-            .ctas {
-                padding-left: $footer-padding-lr;
-                text-align: left;
-
-                .button {
-                    padding: 10px;
-                }
-            }
-        }
-
-        @media (max-width: 590px) {
+        @media (max-width: 470px) {
             .ctas {
                 padding-left: 0;
-                top: -$footer-height;
+                top: -60px;
                 width: 100%;
 
                 .button {
@@ -427,12 +416,19 @@
             background-color: $joy-bg-color;
         }
 
+        .content {
+            background-color: $joy-bg-color;
+        }
+
         .footer {
             transition: background 300ms ease-in-out;
             -moz-transition: background 300ms ease-in-out;
             -webkit-transition: background 300ms ease-in-out;
 
-            background: $joy-bg-color;
+            &,
+            & .ctas {
+                background: $joy-bg-color;
+            }
         }
     }
 
@@ -472,6 +468,16 @@
     &.is-joy-state {
         .content {
             @include vertical-align();
+        }
+    }
+
+    &.is-joy-state {
+        .content {
+            @media (max-height: 1000px) {
+                margin-top: 170px;
+                padding-bottom: 200px;
+                @include top-align();
+            }
         }
     }
 
