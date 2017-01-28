@@ -1,8 +1,8 @@
 <div class="joy-section" ng-cloak ng-switch on="$ctrl.joyCollection.selectedItem.type">
     <div class="text-content" ng-switch-when="text">
-        <div class="text-body">
+        <h2 class="text-body">
             {{$ctrl.joyCollection.selectedItem.text}}
-        </div>
+        </h2>
         <div class="source" ng-if="$ctrl.joyCollection.selectedItem.source">
             source:
             <a class="link link-dark"
@@ -39,7 +39,7 @@
     </div>
 
     <div class="spotify-content" ng-switch-when="spotify">
-        <h1 ng-if="$ctrl.joyCollection.selectedItem.title">{{$ctrl.joyCollection.selectedItem.title}}</h1>
+        <h2 ng-if="$ctrl.joyCollection.selectedItem.title">{{$ctrl.joyCollection.selectedItem.title}}</h2>
         <iframe ng-src="{{$ctrl.joyCollection.selectedItem.uri | spotifyEmbedUrl}}"
                 width="300"
                 height="380"
