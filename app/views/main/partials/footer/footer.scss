@@ -10,7 +10,6 @@
     width: $footer-width;
     height: $footer-height;
     left: 0;
-    //bottom: $footer-padding-lr / 2;
     bottom: 0;
     padding: $footer-padding-tb $footer-padding-lr;
 
@@ -99,7 +98,10 @@
         .ctas {
             padding-left: 0;
             top: -60px;
-            width: 100%;
+            left: -$footer-padding-lr;
+            width: 100% + ($footer-padding-lr * 2);
+
+
 
             .button {
                 display: block;
