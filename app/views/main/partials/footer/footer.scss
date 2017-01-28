@@ -1,0 +1,114 @@
+@import '../../../../assets/styles/colors';
+@import '../../../../assets/styles/dimensions';
+@import '../../../../assets/styles/generics';
+@import '../../../../assets/styles/mixins';
+@import '../../../../assets/styles/animations';
+
+.footer {
+    display: block;
+    position: fixed;
+    width: $footer-width;
+    height: $footer-height;
+    left: 0;
+    //bottom: $footer-padding-lr / 2;
+    bottom: 0;
+    padding: $footer-padding-tb $footer-padding-lr;
+
+    color: $color-white-1;
+
+    @extend .clearfix;
+
+    .creator-credit {
+        display: block;
+        float: left;
+        width: 18px;
+
+        @include vertical-align();
+
+        .link {
+            border: 0;
+        }
+    }
+
+    .additional-info {
+        @include vertical-align();
+
+        display: block;
+        position: absolute;
+        right: $footer-padding-lr;
+        margin: 0;
+        padding: 0;
+        width: 130px;
+
+        list-style-type: none;
+
+        font-size: 1.2rem;
+        font-weight: 300;
+        line-height: 2.0;
+        text-align: right;
+
+        color: $color-white-4;
+
+        .link {
+            opacity: 0.8;
+        }
+    }
+
+    .ctas {
+        display: block;
+        float: left;
+        width: calc(100% - 18px);
+        text-align: center;
+
+        @include vertical-align();
+
+        .button {
+            margin: 0 5px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    @media (max-width: 875px) {
+        .ctas {
+            .button {
+                margin: 0 2px;
+                padding: 10px 15px;
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    @media (max-width: 750px) {
+        .ctas {
+            .button {
+                margin: 0 2px;
+                padding: 10px;
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    @media (max-width: 470px) {
+        .ctas {
+            padding-left: 0;
+            top: -60px;
+            width: 100%;
+
+            .button {
+                display: block;
+                margin: 10px auto !important;
+                width: 60%;
+                min-width: 200px;
+
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+$page-width: 100%;
+$page-inner-width: 90%;
+$page-padding-lr: ($page-width - $page-inner-width) / 2;
+
+$footer-height: 100px;
+$footer-width: $page-width;
+$footer-inner-width: $page-inner-width;
+$footer-padding-lr: $page-padding-lr;
+$footer-padding-tb: 20px;

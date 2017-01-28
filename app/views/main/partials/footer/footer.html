@@ -1,0 +1,50 @@
+<div class="footer">
+    <div class="creator-credit">
+        <a class="link"
+           ng-class="{'link-dark': $ctrl.state.currentView !== 'answer'}"
+           href="http://thalida.com"
+           target="_blank">
+            <span class="emoji emoji-raised-hands"></span>
+        </a>
+    </div>
+
+    <div class="ctas">
+        <a class="button"
+           href
+           ng-class="{'button-dark': $ctrl.state.currentView !== 'answer'}"
+           ng-click="$ctrl.state.go({view: 'joy', id: null})">
+           <span ng-show="$ctrl.state.currentView === 'joy'">More {{t|fuck:'ing'}} joy</span>
+           <span ng-hide="$ctrl.state.currentView === 'joy'">Give me some {{t|fuck:'ing'}} joy</span>
+        </a>
+        <a class="button"
+           href
+           ng-show="$ctrl.actionsCollection.selectedGroup.length > 0"
+           ng-class="{
+               'button-dark': $ctrl.state.currentView === 'joy',
+               'button-clear': $ctrl.state.currentView === 'actions'
+           }"
+           ng-click="$ctrl.state.go({view: 'actions', id: null})">
+            Make a {{t|fuck:'ing'}} difference
+        </a>
+    </div>
+
+    <ul class="additional-info">
+        <li>
+            <a href
+               class="link"
+               ng-class="{'link-dark': $ctrl.state.currentView !== 'answer'}"
+               ng-click="$ctrl.sisterSite.go()">
+                {{$ctrl.sisterSite.data.cta}}
+            </a>
+        </li>
+        <li>
+            Emoji by
+            <a class="link"
+               ng-class="{'link-dark': $ctrl.state.currentView !== 'answer'}"
+               href="http://emojione.com/"
+               target="_blank">
+               Emoji One
+           </a>
+        </li>
+    </ul>
+</div>

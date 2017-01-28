@@ -1,19 +1,10 @@
 @import '../../assets/styles/colors';
+@import '../../assets/styles/dimensions';
 @import '../../assets/styles/generics';
 @import '../../assets/styles/mixins';
 @import '../../assets/styles/animations';
 
 .main-view {
-    $page-width: 100%;
-    $page-inner-width: 90%;
-    $page-padding-lr: ($page-width - $page-inner-width) / 2;
-
-    $footer-height: 100px;
-    $footer-width: $page-width;
-    $footer-inner-width: $page-inner-width;
-    $footer-padding-lr: $page-padding-lr;
-    $footer-padding-tb: 20px;
-
     display: block;
     position: absolute;
     overflow: auto;
@@ -32,94 +23,6 @@
     -moz-transition: background 300ms ease-in-out;
     -webkit-transition: background 300ms ease-in-out;
 
-    .header {
-        display: block;
-        position: fixed;
-        width: $page-inner-width;
-        margin: 0 $page-padding-lr;
-        padding: ($page-padding-lr / 2) 0 15px;
-
-        color: $color-white-1;
-
-        @extend .clearfix;
-
-        .link {
-            border: 0;
-        }
-
-        .problem-section {
-            float: left;
-            padding-bottom: 15px;
-            border-bottom: 1px solid $color-white-4;
-
-            .question {
-                font-weight: 500;
-                text-transform: capitalize;
-            }
-
-            .answer {
-                font-weight: 300;
-            }
-        }
-
-        .share-section {
-            float: right;
-            text-align: right;
-        }
-
-        .copy-status {
-            display: block;
-            padding: 10px;
-
-            border-radius: 4px;
-            box-shadow: 0 5px 4px 0 rgba($color-black-1, 0.05);
-
-            font-size: 14px;
-            font-weight: 300;
-            opacity: 0;
-
-            transition: all 300ms linear;
-            -moz-transition: all 300ms linear;
-            -webkit-transition: all 300ms linear;
-
-            &.is-success {
-                color: black;
-                background-image: linear-gradient(135deg, #7affa4 0%, #5cfff0 100%);
-            }
-
-            &.is-error {
-                color: white;
-                background-image: linear-gradient(135deg, #ff7a7a 0%, #d01f1f 100%);
-            }
-
-            &.is-visible {
-                opacity: 1;
-            }
-        }
-
-        @media (max-width: 520px) {
-            .problem-section {
-                display: block;
-                float: none;
-                width: 100%;
-            }
-
-            .share-section {
-                display: block;
-                float: none;
-                width: 100%;
-                text-align: center;
-                margin-top: 10px;
-            }
-
-            .copy-status {
-                width: 80%;
-                max-width: 180px;
-                margin: 10px auto 0;
-            }
-        }
-    }
-
     .content {
         display: block;
         position: relative;
@@ -129,263 +32,31 @@
         margin: 0 auto;
         padding: 0 10% $footer-height + $footer-padding-tb;
 
-        text-align: center;
+        text-align: center
+    }
 
-        .answer-section {
-            color: $color-white-1;
-            font-size: 8.0rem;
-            font-weight: 300;
-            line-height: 1.2;
-        }
-
-        .joy-section {
-            .text-content {
-                color: $color-black-1;
-                font-weight: 300;
-                line-height: 1.4;
-
-                .text-body {
-                    font-size: 5.0rem;
-                }
-
-                .source {
-                    display: block;
-                    font-size: 1.2rem;
-                }
-            }
-            .image-content {
-                color: $color-black-1;
-                font-weight: 300;
-                line-height: 1.4;
-
-                .img {
-                    width: 100%;
-                    height: 400px;
-                    background-color: $color-black-1;
-                    background-repeat: no-repeat;
-                    background-size: contain;
-                    background-position: center center;
-                }
-
-                .source {
-                    display: block;
-                    margin-top: 20px;
-                    font-size: 1.2rem;
-                }
-            }
-
-            .twitter-content {
-                .twitter-tweet.twitter-tweet-rendered {
-                    margin: 0 auto;
-                }
-            }
-
-            .image-content .img,
-            .twitter-content .twitter-tweet.twitter-tweet-rendered,
-            .spotify-content iframe,
-            .youtube-content iframe {
-                box-shadow: 0 0 20px rgba($color-black-1, 0.3);
-            }
-        }
-
-        .actions-section {
-            margin-top: 30%;
-
-            h1 {
-                color: $color-black-4;
-                font-size: 6.0rem;
-                text-transform: capitalize;
-            }
-
-
-            .actions-list {
-                text-align: left;
-
-                .action-item {
-                    display: block;
-                    position: relative;
-                    padding: 20px;
-                    margin: 30px 0;
-
-                    background: white;
-                    border-radius: 4px;
-                    box-shadow: 0 0 30px rgba(0,0,0,0.2);
-                }
-
-                .action-item-title {
-                    display: inline-block;
-                    position: relative;
-
-                    padding: 0;
-                    margin: 0;
-                }
-
-                .action-item-description {
-                    font-size: 1.8rem;
-                    color: $color-black-2;
-                    margin: 10px 0;
-                }
-
-                .action-item-source {
-                    display: block;
-                    font-size: 1.2rem;
-                }
-
-                .action-item-title,
-                .action-item-description,
-                .action-item-source {
-                    width: calc(100% - 120px);
-                }
-
-                .action-item-link {
-                    position: absolute;
-                    width: 170px;
-                    text-align: center;
-                    height: 50px;
-                    line-height: 30px;
-
-                    top: 30%;
-                    right: -50px;
-                    background: $color-black-1;
-                    box-shadow: 0 0 20px rgba(0,0,0,0.3);
-
-                    background-image: linear-gradient(
-                        135deg,
-                        lighten($color-blue-1, 10%) 0%,
-                        $color-light-blue-1 100%
-                    );
-
-                    &:hover {
-                        box-shadow: none;
-                        border: 1px solid $color-white-2;
-                    }
-                }
-            }
-
-
-            @media (max-width: 650px) {
-                .actions-list {
-                    .action-item-title,
-                    .action-item-description,
-                    .action-item-source {
-                        width: calc(100% - 90px);
-                    }
-
-                    .action-item-link {
-                        font-size: 1.6rem;
-                        width: 120px;
-                        padding: 10px 15px;
-                    }
-                }
-            }
+    &.is-answer-state,
+    &.is-joy-state {
+        .content {
+            @include vertical-align();
         }
     }
 
-    .footer {
-        display: block;
-        position: fixed;
-        width: $footer-width;
-        height: $footer-height;
-        left: 0;
-        //bottom: $footer-padding-lr / 2;
-        bottom: 0;
-        padding: $footer-padding-tb $footer-padding-lr;
+    &.is-joy-state,
+    &.is-actions-state {
+        .header {
+            color: $color-black-1;
 
-        color: $color-white-1;
-
-        @extend .clearfix;
-
-        .creator-credit {
-            display: block;
-            float: left;
-            width: 18px;
-
-            @include vertical-align();
-
-            .link {
-                border: 0;
+            .problem-section {
+                border-bottom-color: $color-black-4;
             }
         }
 
-        .additional-info {
-            @include vertical-align();
+        .footer {
+            color: $color-black-1;
 
-            display: block;
-            position: absolute;
-            right: $footer-padding-lr;
-            margin: 0;
-            padding: 0;
-            width: 130px;
-
-            list-style-type: none;
-
-            font-size: 1.2rem;
-            font-weight: 300;
-            line-height: 2.0;
-            text-align: right;
-
-            color: $color-white-4;
-
-            .link {
-                opacity: 0.8;
-            }
-        }
-
-        .ctas {
-            display: block;
-            float: left;
-            width: calc(100% - 18px);
-            text-align: center;
-
-            @include vertical-align();
-
-            .button {
-                margin: 0 5px;
-
-                &:first-child {
-                    margin-left: 0;
-                }
-
-                &:last-child {
-                    margin-right: 0;
-                }
-            }
-        }
-
-        @media (max-width: 875px) {
-            .ctas {
-                .button {
-                    margin: 0 2px;
-                    padding: 10px 15px;
-                    font-size: 1.6rem;
-                }
-            }
-        }
-
-        @media (max-width: 750px) {
-            .ctas {
-                .button {
-                    margin: 0 2px;
-                    padding: 10px;
-                    font-size: 1.4rem;
-                }
-            }
-        }
-
-        @media (max-width: 470px) {
-            .ctas {
-                padding-left: 0;
-                top: -60px;
-                width: 100%;
-
-                .button {
-                    display: block;
-                    margin: 10px auto !important;
-                    width: 60%;
-                    min-width: 200px;
-
-                    text-align: center;
-                }
+            .additional-info {
+                color: $color-black-4;
             }
         }
     }
@@ -418,6 +89,12 @@
 
         .content {
             background-color: $joy-bg-color;
+
+            @media (max-height: 1000px) {
+                margin-top: 170px;
+                padding-bottom: 200px;
+                @include top-align();
+            }
         }
 
         .footer {
@@ -461,42 +138,6 @@
             -webkit-transition: background 300ms ease-in-out;
 
             background: $actions-bg-color;
-        }
-    }
-
-    &.is-answer-state,
-    &.is-joy-state {
-        .content {
-            @include vertical-align();
-        }
-    }
-
-    &.is-joy-state {
-        .content {
-            @media (max-height: 1000px) {
-                margin-top: 170px;
-                padding-bottom: 200px;
-                @include top-align();
-            }
-        }
-    }
-
-    &.is-joy-state,
-    &.is-actions-state {
-        .header {
-            color: $color-black-1;
-
-            .problem-section {
-                border-bottom-color: $color-black-4;
-            }
-        }
-
-        .footer {
-            color: $color-black-1;
-
-            .additional-info {
-                color: $color-black-4;
-            }
         }
     }
 }

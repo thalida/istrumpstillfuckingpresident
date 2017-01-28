@@ -1,0 +1,97 @@
+@import '../../../../assets/styles/colors';
+@import '../../../../assets/styles/dimensions';
+@import '../../../../assets/styles/generics';
+@import '../../../../assets/styles/mixins';
+@import '../../../../assets/styles/animations';
+
+.actions-section {
+    margin-top: 30%;
+
+    h1 {
+        color: $color-black-4;
+        font-size: 6.0rem;
+        text-transform: capitalize;
+    }
+
+
+    .actions-list {
+        text-align: left;
+
+        .action-item {
+            display: block;
+            position: relative;
+            padding: 20px;
+            margin: 30px 0;
+
+            background: white;
+            border-radius: 4px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.2);
+        }
+
+        .action-item-title {
+            display: inline-block;
+            position: relative;
+
+            padding: 0;
+            margin: 0;
+        }
+
+        .action-item-description {
+            font-size: 1.8rem;
+            color: $color-black-2;
+            margin: 10px 0;
+        }
+
+        .action-item-source {
+            display: block;
+            font-size: 1.2rem;
+        }
+
+        .action-item-title,
+        .action-item-description,
+        .action-item-source {
+            width: calc(100% - 120px);
+        }
+
+        .action-item-link {
+            position: absolute;
+            width: 170px;
+            text-align: center;
+            height: 50px;
+            line-height: 30px;
+
+            top: 30%;
+            right: -50px;
+            background: $color-black-1;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+
+            background-image: linear-gradient(
+                135deg,
+                lighten($color-blue-1, 10%) 0%,
+                $color-light-blue-1 100%
+            );
+
+            &:hover {
+                box-shadow: none;
+                border: 1px solid $color-white-2;
+            }
+        }
+    }
+
+
+    @media (max-width: 650px) {
+        .actions-list {
+            .action-item-title,
+            .action-item-description,
+            .action-item-source {
+                width: calc(100% - 90px);
+            }
+
+            .action-item-link {
+                font-size: 1.6rem;
+                width: 120px;
+                padding: 10px 15px;
+            }
+        }
+    }
+}

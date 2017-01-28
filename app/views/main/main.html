@@ -9,93 +9,13 @@
      ]"
      ng-if="$ctrl.render">
 
-    <div class="header">
-        <div class="problem-section">
-            <a href
-               class="link question"
-               ng-class="{'link-dark': $ctrl.state.currentView !== 'answer'}"
-               ng-click="$ctrl.state.go({view: 'answer', id: null})">
-                 Q: Is Trump Still {{t|fuck:'ing'}} President?
-            </a>
-            <div class="answer"
-                 ng-show="$ctrl.state.currentView !== 'answer'">
-                A: {{$ctrl.answerCollection.selectedItem}}
-            </div>
-        </div>
-        <div class="share-section"
-             ng-show="$ctrl.state.currentView === 'joy'">
-            <span class="clickable icon icon-share"
-                  ngclipboard
-                  ngclipboard-success="$ctrl.onCopySuccess(e);"
-                  ngclipboard-error="$ctrl.onCopyError(e);"
-                  data-clipboard-text="{{$ctrl.state.shareUrl}}">
-            </span>
-           <span class="copy-status"
-                ng-class="{
-                   'is-success': $ctrl.copyStatusType === 'success',
-                   'is-error': $ctrl.copyStatusType === 'error',
-                   'is-visible': $ctrl.copyStatusVisible === true
-               }">
-               <span ng-show="$ctrl.copyStatusType === 'success'">Url copied to clipboard</span>
-               <span ng-show="$ctrl.copyStatusType === 'error'">Error copying url to clipboard</span>
-           </span>
-        </div>
-    </div>
+    <div ng-include="'views/main/partials/header/header.html'"></div>
 
     <div class="content">
-        <div ng-if="$ctrl.state.currentView === 'answer'" ng-include="'views/main/partials/answer.html'"></div>
-        <div ng-if="$ctrl.state.currentView === 'joy'" ng-include="'views/main/partials/joy.html'"></div>
-        <div ng-if="$ctrl.state.currentView === 'actions'" ng-include="'views/main/partials/actions.html'"></div>
+        <div ng-if="$ctrl.state.currentView === 'answer'" ng-include="'views/main/partials/answer/answer.html'"></div>
+        <div ng-if="$ctrl.state.currentView === 'joy'" ng-include="'views/main/partials/joy/joy.html'"></div>
+        <div ng-if="$ctrl.state.currentView === 'actions'" ng-include="'views/main/partials/actions/actions.html'"></div>
     </div>
-
-    <div class="footer">
-        <div class="creator-credit">
-            <a class="link"
-               ng-class="{'link-dark': $ctrl.state.currentView !== 'answer'}"
-               href="http://thalida.com"
-               target="_blank">
-                <span class="emoji emoji-raised-hands"></span>
-            </a>
-        </div>
-
-        <div class="ctas">
-            <a class="button"
-               href
-               ng-class="{'button-dark': $ctrl.state.currentView !== 'answer'}"
-               ng-click="$ctrl.state.go({view: 'joy', id: null})">
-               <span ng-show="$ctrl.state.currentView === 'joy'">More {{t|fuck:'ing'}} joy</span>
-               <span ng-hide="$ctrl.state.currentView === 'joy'">Give me some {{t|fuck:'ing'}} joy</span>
-            </a>
-            <a class="button"
-               href
-               ng-show="$ctrl.actionsCollection.selectedGroup.length > 0"
-               ng-class="{
-                   'button-dark': $ctrl.state.currentView === 'joy',
-                   'button-clear': $ctrl.state.currentView === 'actions'
-               }"
-               ng-click="$ctrl.state.go({view: 'actions', id: null})">
-                Make a {{t|fuck:'ing'}} difference
-            </a>
-        </div>
-
-        <ul class="additional-info">
-            <li>
-                <a href
-                   class="link"
-                   ng-class="{'link-dark': $ctrl.state.currentView !== 'answer'}"
-                   ng-click="$ctrl.sisterSite.go()">
-                    {{$ctrl.sisterSite.data.cta}}
-                </a>
-            </li>
-            <li>
-                Emoji by
-                <a class="link"
-                   ng-class="{'link-dark': $ctrl.state.currentView !== 'answer'}"
-                   href="http://emojione.com/"
-                   target="_blank">
-                   Emoji One
-               </a>
-            </li>
-        </ul>
-    </div>
+    
+    <div ng-include="'views/main/partials/footer/footer.html'"></div>
 </div>
