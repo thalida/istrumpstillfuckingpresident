@@ -17,13 +17,13 @@ webpackJsonp([1],[
 	__webpack_require__(4);
 	
 	// App
-	__webpack_require__(162);
-	__webpack_require__(163);
-	__webpack_require__(161);
-	
-	__webpack_require__(169);
 	__webpack_require__(164);
-	__webpack_require__(174);
+	__webpack_require__(165);
+	__webpack_require__(163);
+	
+	__webpack_require__(171);
+	__webpack_require__(166);
+	__webpack_require__(176);
 	
 	// Bootstrap the angular app (if it hasn't been done already)
 	var appScope = angular.element(document.querySelectorAll('.app')).scope()
@@ -174,11 +174,13 @@ webpackJsonp([1],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./emoji-raised_hands.svg": 147,
+		"./banner-512.png": 147,
+		"./emoji-raised_hands.svg": 148,
+		"./icon-16.png": 149,
 		"./index": 4,
 		"./index.js": 4,
-		"./link-icon.svg": 148,
-		"./share-icon.svg": 149
+		"./link-icon.svg": 150,
+		"./share-icon.svg": 151
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -199,7 +201,7 @@ webpackJsonp([1],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./twitter/index.js": 165
+		"./twitter/index.js": 167
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -220,9 +222,9 @@ webpackJsonp([1],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./collection/index.js": 168,
-		"./sites/index.js": 170,
-		"./utils/index.js": 172
+		"./collection/index.js": 170,
+		"./sites/index.js": 172,
+		"./utils/index.js": 174
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -243,7 +245,7 @@ webpackJsonp([1],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./main/index.js": 175
+		"./main/index.js": 177
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -264,11 +266,11 @@ webpackJsonp([1],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./actions/actions.html": 182,
-		"./answer/answer.html": 183,
-		"./footer/footer.html": 184,
-		"./header/header.html": 185,
-		"./joy/joy.html": 186
+		"./actions/actions.html": 184,
+		"./answer/answer.html": 185,
+		"./footer/footer.html": 186,
+		"./header/header.html": 187,
+		"./joy/joy.html": 188
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -321,7 +323,7 @@ webpackJsonp([1],[
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
 	    if (true) {
-	        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [module, __webpack_require__(187)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [module, __webpack_require__(189)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	    } else if (typeof exports !== "undefined") {
 	        factory(module, require('select'));
 	    } else {
@@ -555,7 +557,7 @@ webpackJsonp([1],[
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
 	    if (true) {
-	        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [module, __webpack_require__(133), __webpack_require__(188), __webpack_require__(151)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [module, __webpack_require__(133), __webpack_require__(190), __webpack_require__(153)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	    } else if (typeof exports !== "undefined") {
 	        factory(module, require('./clipboard-action'), require('tiny-emitter'), require('good-listener'));
 	    } else {
@@ -829,7 +831,7 @@ webpackJsonp([1],[
 /* 137 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["_"] = __webpack_require__(158);
+	/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["_"] = __webpack_require__(160);
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
@@ -885,22 +887,34 @@ webpackJsonp([1],[
 /* 147 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "assets/images/emoji-raised_hands.svg";
+	module.exports = __webpack_require__.p + "assets/images/banner-512.png";
 
 /***/ },
 /* 148 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "assets/images/link-icon.svg";
+	module.exports = __webpack_require__.p + "assets/images/emoji-raised_hands.svg";
 
 /***/ },
 /* 149 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "assets/images/share-icon.svg";
+	module.exports = __webpack_require__.p + "assets/images/icon-16.png";
 
 /***/ },
 /* 150 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "assets/images/link-icon.svg";
+
+/***/ },
+/* 151 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "assets/images/share-icon.svg";
+
+/***/ },
+/* 152 */
 /***/ function(module, exports) {
 
 	/**
@@ -955,10 +969,10 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 151 */
+/* 153 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var is = __webpack_require__(150);
+	var is = __webpack_require__(152);
 	var delegate = __webpack_require__(136);
 	
 	/**
@@ -1056,8 +1070,8 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 152 */,
-/* 153 */
+/* 154 */,
+/* 155 */
 /***/ function(module, exports) {
 
 	module.exports = [
@@ -1124,7 +1138,7 @@ webpackJsonp([1],[
 	];
 
 /***/ },
-/* 154 */
+/* 156 */
 /***/ function(module, exports) {
 
 	module.exports = [
@@ -1136,7 +1150,7 @@ webpackJsonp([1],[
 	];
 
 /***/ },
-/* 155 */
+/* 157 */
 /***/ function(module, exports) {
 
 	module.exports = [
@@ -1147,7 +1161,7 @@ webpackJsonp([1],[
 	];
 
 /***/ },
-/* 156 */
+/* 158 */
 /***/ function(module, exports) {
 
 	module.exports = [
@@ -1192,13 +1206,13 @@ webpackJsonp([1],[
 	];
 
 /***/ },
-/* 157 */
+/* 159 */
 /***/ function(module, exports) {
 
 	module.exports = true;
 
 /***/ },
-/* 158 */
+/* 160 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global, module) {/**
@@ -18289,9 +18303,9 @@ webpackJsonp([1],[
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(120)(module)))
 
 /***/ },
-/* 159 */,
-/* 160 */,
-/* 161 */
+/* 161 */,
+/* 162 */,
+/* 163 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -18321,7 +18335,7 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 162 */
+/* 164 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18335,7 +18349,7 @@ webpackJsonp([1],[
 		__webpack_require__(7),
 		__webpack_require__(8),
 	    __webpack_require__(9),
-		__webpack_require__(179),
+		__webpack_require__(181),
 		'ngStorage'
 	])
 	.constant('IS_FUCK_ENABLED', (function () {
@@ -18347,15 +18361,15 @@ webpackJsonp([1],[
 	
 		return enabledSites.indexOf(window.location.hostname) >= 0;
 	})())
-	.constant('IS_STILL_PRESIDENT', __webpack_require__(157))
-	.constant('NEGATIVE_ANSWERS', __webpack_require__(154))
-	.constant('POSITIVE_ANSWERS', __webpack_require__(155))
-	.constant('JOY_COLLECTION', __webpack_require__(156))
-	.constant('ACTIONS_COLLECTION', __webpack_require__(153))
+	.constant('IS_STILL_PRESIDENT', __webpack_require__(159))
+	.constant('NEGATIVE_ANSWERS', __webpack_require__(156))
+	.constant('POSITIVE_ANSWERS', __webpack_require__(157))
+	.constant('JOY_COLLECTION', __webpack_require__(158))
+	.constant('ACTIONS_COLLECTION', __webpack_require__(155))
 
 
 /***/ },
-/* 163 */
+/* 165 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -18371,7 +18385,7 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 164 */
+/* 166 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var requireAll = __webpack_require__(3).requireAll;
@@ -18379,19 +18393,19 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 165 */
+/* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	__webpack_require__(140);
-	__webpack_require__(180);
+	__webpack_require__(182);
 	
-	angular.module('app').component('twitter', __webpack_require__(166));
+	angular.module('app').component('twitter', __webpack_require__(168));
 
 
 /***/ },
-/* 166 */
+/* 168 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -18435,7 +18449,7 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 167 */
+/* 169 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -18550,25 +18564,6 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 168 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict'
-	
-	angular
-	    .module('app')
-	    .service('Collection', __webpack_require__(167));
-
-
-/***/ },
-/* 169 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var requireAll = __webpack_require__(3).requireAll;
-	requireAll(__webpack_require__(123));
-
-
-/***/ },
 /* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -18576,11 +18571,30 @@ webpackJsonp([1],[
 	
 	angular
 	    .module('app')
-	    .service('sitesService', __webpack_require__(171));
+	    .service('Collection', __webpack_require__(169));
 
 
 /***/ },
 /* 171 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var requireAll = __webpack_require__(3).requireAll;
+	requireAll(__webpack_require__(123));
+
+
+/***/ },
+/* 172 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict'
+	
+	angular
+	    .module('app')
+	    .service('sitesService', __webpack_require__(173));
+
+
+/***/ },
+/* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18629,18 +18643,18 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 172 */
+/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict'
 	
 	angular
 	    .module('app')
-	    .service('utils', __webpack_require__(173));
+	    .service('utils', __webpack_require__(175));
 
 
 /***/ },
-/* 173 */
+/* 175 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -18665,14 +18679,14 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 174 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	window.requireAll(__webpack_require__(124));
 
 
 /***/ },
-/* 175 */
+/* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18681,17 +18695,17 @@ webpackJsonp([1],[
 	__webpack_require__(141);
 	
 	// Templates
-	__webpack_require__(178);
-	__webpack_require__(181);
+	__webpack_require__(180);
+	__webpack_require__(183);
 	
 	angular
 	    .module('app')
-	    .config( __webpack_require__(177) )
-	    .controller('MainController', __webpack_require__(176) )
+	    .config( __webpack_require__(179) )
+	    .controller('MainController', __webpack_require__(178) )
 
 
 /***/ },
-/* 176 */
+/* 178 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -18860,7 +18874,7 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 177 */
+/* 179 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -18885,7 +18899,7 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 178 */
+/* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
 	window.requireAll(__webpack_require__(125));
@@ -18893,7 +18907,7 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 179 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*! ngclipboard - v1.1.1 - 2016-02-26
@@ -18947,7 +18961,7 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 180 */
+/* 182 */
 /***/ function(module, exports) {
 
 	var path = 'components/twitter/twitter.html';
@@ -18956,7 +18970,7 @@ webpackJsonp([1],[
 	module.exports = path;
 
 /***/ },
-/* 181 */
+/* 183 */
 /***/ function(module, exports) {
 
 	var path = 'views/main/main.html';
@@ -18965,7 +18979,7 @@ webpackJsonp([1],[
 	module.exports = path;
 
 /***/ },
-/* 182 */
+/* 184 */
 /***/ function(module, exports) {
 
 	var path = 'views/main/partials/actions/actions.html';
@@ -18974,7 +18988,7 @@ webpackJsonp([1],[
 	module.exports = path;
 
 /***/ },
-/* 183 */
+/* 185 */
 /***/ function(module, exports) {
 
 	var path = 'views/main/partials/answer/answer.html';
@@ -18983,7 +18997,7 @@ webpackJsonp([1],[
 	module.exports = path;
 
 /***/ },
-/* 184 */
+/* 186 */
 /***/ function(module, exports) {
 
 	var path = 'views/main/partials/footer/footer.html';
@@ -18992,7 +19006,7 @@ webpackJsonp([1],[
 	module.exports = path;
 
 /***/ },
-/* 185 */
+/* 187 */
 /***/ function(module, exports) {
 
 	var path = 'views/main/partials/header/header.html';
@@ -19001,7 +19015,7 @@ webpackJsonp([1],[
 	module.exports = path;
 
 /***/ },
-/* 186 */
+/* 188 */
 /***/ function(module, exports) {
 
 	var path = 'views/main/partials/joy/joy.html';
@@ -19010,7 +19024,7 @@ webpackJsonp([1],[
 	module.exports = path;
 
 /***/ },
-/* 187 */
+/* 189 */
 /***/ function(module, exports) {
 
 	function select(element) {
@@ -19049,7 +19063,7 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 188 */
+/* 190 */
 /***/ function(module, exports) {
 
 	function E () {
