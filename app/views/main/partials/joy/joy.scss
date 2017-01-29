@@ -47,6 +47,25 @@
         }
     }
 
+    .spotify-content {
+        iframe {
+            width: 80%;
+            height: 500px;
+
+            @media (max-width: 700px) {
+                width: 100%;
+            }
+
+            @media (max-height: 1000px) {
+                height: 400px;
+            }
+
+            @media (max-height: 800px) {
+                height: 300px;
+            }
+        }
+    }
+
     .youtube-content {
         iframe {
             width: 100%;
