@@ -131,7 +131,7 @@ var Controller = function (
 		data: null,
 		setup: function () {
 			this.data = sitesService.getSisterSite();
-			this.data.cta = (this.data.hasFucks) ? 'Add some fucks' : 'Remove the fucks'
+			this.data.cta = (this.data.hasFucks) ? 'Add some f*cks' : 'Remove the fucks'
 		},
 		go: function () {
 			window.location.href = this.data.url + window.location.pathname;
