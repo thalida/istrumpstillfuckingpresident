@@ -96,7 +96,7 @@ var common = {
 
 var productionConfig = {
     plugins: [
-        new CopyWebpackPlugin([{ context: __dirname, from: './CNAME' }], { copyUnmodified: true }),
+        new CopyWebpackPlugin([{ context: __dirname, from: './.htaccess' }], { copyUnmodified: true }),
         new webpack.optimize.CommonsChunkPlugin("vendors", "vendors.[hash].js"),
         new ExtractTextPlugin("[name].[hash].css", {
             allChunks: true
