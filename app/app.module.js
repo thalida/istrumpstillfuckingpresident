@@ -23,6 +23,7 @@ angular
 })())
 .constant('IS_STILL_PRESIDENT', require('./assets/data/stillpresident.json'))
 .constant('NEGATIVE_ANSWERS', require('./assets/data/answers/negative.json'))
+.constant('NEGATIVE_FUCK_ANSWERS', require('./assets/data/answers/negative-fuck.json'))
 .constant('POSITIVE_ANSWERS', require('./assets/data/answers/positive.json'))
 .constant('JOY_COLLECTION', require('./assets/data/joy/collection.json'))
 .constant('ACTIONS_COLLECTION', require('./assets/data/actions/collection.json'))

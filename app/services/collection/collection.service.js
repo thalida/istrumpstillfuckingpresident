@@ -5,6 +5,7 @@ var service = function (
 	IS_FUCK_ENABLED,
 	IS_STILL_PRESIDENT,
 	NEGATIVE_ANSWERS,
+	NEGATIVE_FUCK_ANSWERS,
 	POSITIVE_ANSWERS,
 	JOY_COLLECTION,
 	ACTIONS_COLLECTION
@@ -19,6 +20,10 @@ var service = function (
 			negative: NEGATIVE_ANSWERS,
 		},
 	};
+
+	if (IS_FUCK_ENABLED) {
+		itemGroups.answers.negative = itemGroups.answers.negative.concat(NEGATIVE_FUCK_ANSWERS);
+	}
 
 	var Collection = function (type) {
 		var self = this;
