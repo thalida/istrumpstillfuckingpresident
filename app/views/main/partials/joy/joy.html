@@ -14,6 +14,7 @@
     </div>
 
     <div class="image-content" ng-switch-when="image">
+        <h2 ng-if="$ctrl.joyCollection.selectedItem.title">{{$ctrl.joyCollection.selectedItem.title}}</h2>
         <div class="img" ng-style="{'background-image': 'url({{$ctrl.joyCollection.selectedItem.url}})'}" />
         <div class="source" ng-if="$ctrl.joyCollection.selectedItem.source">
             source:

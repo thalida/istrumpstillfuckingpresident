@@ -2,8 +2,14 @@
     {
         "active": true,
         "type": "text",
-        "text": "~1.5 Millon Fucking People Participated in the Women’s March Around the World",
-        "source": "http://foobar.com"
+        "text": "Crowd Scientists Say Women’s March in Washington Had 3 Times as Many People as Drumpf’s Inauguration",
+        "source": "https://www.nytimes.com/interactive/2017/01/22/us/politics/womens-march-trump-crowd-estimates.html"
+    },
+    {
+        "active": true,
+        "type": "text",
+        "text": "The Women's Marches may have been the largest demonstration in US history",
+        "source": "http://www.vox.com/2017/1/22/14350808/womens-marches-largest-demonstration-us-history-map"
     },
     {
         "active": true,
@@ -14,27 +20,30 @@
     {
         "active": true,
         "type": "text",
-        "text": "A Nazi Was Punched In the Face"
+        "text": "A Nazi Was Punched in the Face"
     },
     {
         "active": true,
         "type": "twitter",
-        "url": "https://twitter.com/ibizoboi/status/823199147960528900"
-    },
-    {
-        "active": true,
-        "type": "image",
-        "url": "https://www.pbh2.com/wordpress/wp-content/uploads/2013/05/cutest-cat-gifs-licking.gif",
-        "source": "http://foobar.com"
+        "url": "https://twitter.com/mumbles_j/status/823199061381672962"
     },
     {
         "active": true,
         "type": "youtube",
-        "videoId": "s4yUEWZ4u0g"
+        "videoId": "r0hBEpG4jLQ"
     },
     {
-        "active": false,
-        "type": "spotify",
-        "uri": "spotify:track:5JTAGruCIDyRLhKLwFkTnS"
+        "active": true,
+        "type": "text",
+        "text": "Six Black Actors Nominated for an Oscar",
+        "source": "http://www.vanityfair.com/hollywood/2017/01/oscars-2017-historic-nominations"
+    },
+    {
+        "active": true,
+        "type": "image",
+        "title": "Representative Ilhan Omar's Swearing In",
+        "url": "https://thumbs.mic.com/YzJiNzZjODlkOSMvQWdrX2ttU3ZPOUozVHFxdkJoRDczdmM3dnc4PS83ODJ4NjU6NDE1NXgyNDgzLzYyMXg0NDUvZmlsdGVyczpxdWFsaXR5KDcwKS9odHRwOi8vczMuYW1hem9uYXdzLmNvbS9wb2xpY3ltaWMtaW1hZ2VzL2Fya2lyZ2J4bXNiZmxoc3lzbTV2dGlweGp6eHVsbXpvZmxidzkxYW03OHd5aXE5dXJ2dXk3cHd2ZXh6ZGdiODQuanBn.jpg",
+        "source": "https://mic.com/articles/164199/this-photo-of-ilhan-omar-s-swearing-in-ceremony-shows-exactly-why-representation-matters#.vXiaOwsYU"
     }
+
 ]

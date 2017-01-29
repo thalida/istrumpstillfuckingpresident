@@ -47,6 +47,12 @@
         }
     }
 
+    .youtube-content {
+        iframe {
+            width: 100%;
+        }
+    }
+
     .image-content .img,
     .twitter-content .twitter-tweet.twitter-tweet-rendered,
     .spotify-content iframe,
